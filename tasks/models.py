@@ -83,6 +83,7 @@ workedFonts = [
 class Bitacora(models.Model):
     Fecha = models.DateField()
     COD_bitacora = models.AutoField(primary_key=True)
+    Nombre= models.CharField(max_length=40, null=True)
     Horas_laboradas = models.FloatField(max_length=5, null=False)
     cliente = models.ForeignKey(Cliente, null=True,  on_delete=models.CASCADE)
     Proyecto= models.ForeignKey(Proyecto, null=True,  on_delete=models.CASCADE)
